@@ -1,8 +1,6 @@
 package utils.venus.com.utils;
 
-import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -38,36 +36,6 @@ public class ListAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
     protected void convert(BaseViewHolder helper, String item) {
 
         switch (helper.getItemViewType()){
-            case 1:
-                ViewPager view = helper.getView(R.id.viewpager);
-                final Button view1 = helper.getView(R.id.test);
-
-                for (String s : getData()) {
-
-                    ImageView imageView=new ImageView(mContext);
-
-                    Glide.with(mContext).load(s).into(imageView);
-                    viewList.add(imageView);
-                }
-                view.setAdapter(new ViewAdapter(viewList));
-                view.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-                    @Override
-                    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-                    }
-
-                    @Override
-                    public void onPageSelected(int position) {
-
-                        view1.setText(String.valueOf(position)+"/"+viewList.size());
-                    }
-
-                    @Override
-                    public void onPageScrollStateChanged(int state) {
-
-                    }
-                });
-                break;
             case 2:
                 ImageView imageView = helper.getView(R.id.image);
                 Glide.with(mContext).load(item).into(imageView);
