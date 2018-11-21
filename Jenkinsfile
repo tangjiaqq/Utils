@@ -1,22 +1,10 @@
-node('android') {
-    step([$class: 'StashNotifier'])
-    checkout scm
-    stage('Build') {
-      try {
-        sh './gradlew --refresh-dependencies clean assemble'
-        lock('emulator') {
-          sh './gradlew connectedCheck'
-        }
-        currentBuild.result = 'SUCCESS'
-     } catch(error) {
-       slackSend channel: '#build-failures', color: 'bad', message: "This build is broken ${env.BUILD_URL}", token: 'XXXXXXXXXXX'
-		currentBuild.result = 'FAILURE'
-      } finally {
-        junit '**/test-results/**/*.xml'
-      }
-    }
-    stage('Archive') {
-      archiveArtifacts 'app/build/outputs/apk/*'
-    }
-step([$class: 'StashNotifier'])
+node {
+   // Mark the code checkout 'stage'....
+   stage 'Checkout'
+
+   // Get some code from a GitHub repository
+    git([url: 'https://github.com/tangjiaqq/Utils.git', branch: 'master'])
+   stage 'Build'
+   sh "gradle clean assembleDebug"
+  
 }
