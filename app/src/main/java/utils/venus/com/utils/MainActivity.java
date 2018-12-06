@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         List<MainCalss> data = new ArrayList<>();
 
         data.add(new MainCalss(ViewFlipperActivity.class, "轮播"));
+        data.add(new MainCalss(GlideActivity.class, "Glide"));
+        data.add(new MainCalss(SpanActivity.class, "Span"));
 
 
         baseQuickAdapter = new BaseQuickAdapter<MainCalss, BaseViewHolder>(R.layout.item, data) {

@@ -18,8 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListActivity"></activity>
-        <activity android:name=".ViewFlipperActivity"></activity>
+        <activity android:name=".ListActivity" />
+        <activity android:name=".ViewFlipperActivity" />
+        <activity android:name=".GlideActivity" />
+        <activity android:name=".SpanActivity"></activity>
     </application>
 
 </manifest>
