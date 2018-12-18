@@ -21,7 +21,9 @@
         <activity android:name=".ListActivity" />
         <activity android:name=".ViewFlipperActivity" />
         <activity android:name=".GlideActivity" />
-        <activity android:name=".SpanActivity"></activity>
+        <activity android:name=".SpanActivity" />
+        <activity android:name=".FrameActivity" />
+        <activity android:name=".AdaptationActivity"></activity>
     </application>
 
 </manifest>

@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         data.add(new MainCalss(ViewFlipperActivity.class, "轮播"));
         data.add(new MainCalss(GlideActivity.class, "Glide"));
         data.add(new MainCalss(SpanActivity.class, "Span"));
+        data.add(new MainCalss(FrameActivity.class, "FrameActivity"));
+        data.add(new MainCalss(AdaptationActivity.class, "AdaptationActivity"));
 
 
         baseQuickAdapter = new BaseQuickAdapter<MainCalss, BaseViewHolder>(R.layout.item, data) {

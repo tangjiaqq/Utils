@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdaptationActivity">
+
+
+    <ImageView
+        android:layout_width="213pt"
+        android:layout_height="213pt"
+        android:background="@color/bg_fb1111" />
+
+    <ImageView
+
+        android:layout_width="213pt"
+        android:layout_height="213pt"
+        android:background="@color/tcolor_999" />
+
+    <TextView
+        android:layout_width="213pt"
+        android:layout_height="wrap_content"
+        android:text="中国"
+        android:textSize="20pt" />
+    <TextView
+        android:layout_width="213pt"
+        android:layout_height="wrap_content"
+        android:text="中国"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="213pt"
+        android:layout_height="wrap_content"
+        android:text="中国"
+        android:textSize="20sp" />
+</LinearLayout>

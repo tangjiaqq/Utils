@@ -27,15 +27,14 @@ public class SpanActivity extends AppCompatActivity {
 
         {
             SpanUtils spanUtils = new SpanUtils();
-//            spanUtils.append("地址").setFontSize(14, true);
-            spanUtils.appendSpace(DisplayUtil.sp2px(this, 14) * 2);
+            spanUtils.append("4S");
 
             mTv1.setText(spanUtils.create());
         }
 
         {
             SpanUtils spanUtils = new SpanUtils();
-            spanUtils.append("联系").setFontSize(DisplayUtil.sp2px(this, 14));
+            spanUtils.append("联");
             mTv2.setText(spanUtils.create());
         }
 
