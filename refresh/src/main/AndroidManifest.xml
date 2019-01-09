@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="utils.venus.com.utils">
-
-    <uses-permission android:name="android.permission.INTERNET" />
+    package="com.example.refresh">
 
     <application
         android:allowBackup="true"
@@ -18,14 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListActivity" />
-        <activity android:name=".ViewFlipperActivity" />
-        <activity android:name=".GlideActivity" />
-        <activity android:name=".SpanActivity" />
-        <activity android:name=".FrameActivity" />
-        <activity android:name=".AdaptationActivity" />
-        <activity android:name=".NotificationActivity" />
-        <activity android:name=".SmartActivity"></activity>
     </application>
 
 </manifest>

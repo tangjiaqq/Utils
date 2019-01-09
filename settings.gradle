@@ -1,1 +1,1 @@
-include ':app', ':basissdk'
+include ':app', ':basissdk', ':refresh'

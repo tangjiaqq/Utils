@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.tang.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Utils.Test();
         RecyclerView viewById = findViewById(R.id.recyclerview);
 
         viewById.setLayoutManager(new LinearLayoutManager(this));
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         data.add(new MainCalss(SpanActivity.class, "Span"));
         data.add(new MainCalss(FrameActivity.class, "FrameActivity"));
         data.add(new MainCalss(AdaptationActivity.class, "AdaptationActivity"));
+        data.add(new MainCalss(NotificationActivity.class, "Nofi"));
+        data.add(new MainCalss(SmartActivity.class, "Smart"));
 
 
         baseQuickAdapter = new BaseQuickAdapter<MainCalss, BaseViewHolder>(R.layout.item, data) {
