@@ -3,8 +3,11 @@ package utils.venus.com.utils;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.PagerSnapHelper;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -19,16 +22,22 @@ import utils.venus.com.entity.MainCalss;
 public class MainActivity extends AppCompatActivity {
 
     private BaseQuickAdapter<MainCalss, BaseViewHolder> baseQuickAdapter;
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.e(TAG, "onCreate: " + getPackageName());
 
         Utils.Test();
         RecyclerView viewById = findViewById(R.id.recyclerview);
 
-        viewById.setLayoutManager(new LinearLayoutManager(this));
+        PagerSnapHelper pagerSnapHelper = new PagerSnapHelper();
+
+        pagerSnapHelper.attachToRecyclerView(viewById);
+
+        viewById.setLayoutManager(new GridLayoutManager(this, 3));
         List<MainCalss> data = new ArrayList<>();
 
         data.add(new MainCalss(ViewFlipperActivity.class, "轮播"));
