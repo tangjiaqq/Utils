@@ -21,6 +21,7 @@ allprojects {
         google()
         jcenter()
         maven { url "https://jitpack.io" }
+        maven { url 'http://10.10.10.11:14006/repository/maven-tang/' }
     }
 }
 
